@@ -4,7 +4,7 @@
 [![CircleCI Orb Version](https://badges.circleci.com/orbs/timo-reymann/github-release.svg)](https://circleci.com/orbs/registry/orb/timo-reymann/github-release)
 [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/timo-reymann//master/LICENSE)
 
-CircleCI Orb to run [github-release]() in an easy and configurable way.
+CircleCI Orb to run [github-release](https://github.com/github-release/github-release) in an easy and configurable way.
 
 ## Resources
 

@@ -1,0 +1,24 @@
+description: >
+  Use the commands to integrate into your existing build easily
+usage:
+  version: 2.1
+  orbs:
+    github-release: timo-reymann/github-release@<version>
+
+  executors:
+    go:
+      docker:
+        - image: circleci/golang:1.15
+
+  jobs:
+    github_release:
+      executor: go
+      steps:
+        - checkout
+        - run:
+            name: Build binaries
+            command: make build
+        - github-release/setup
+        - github-release/create-release
+        - github-release/upload-files:
+            file_pattern: 'build/*'

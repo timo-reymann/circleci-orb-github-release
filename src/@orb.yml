@@ -1,7 +1,9 @@
 version: 2.1
 
-description: >
-  Create github release
+description: |
+  Create github release using github-release go package.
+
+  Make sure to set the environment variable GITHUB_TOKEN, this is required by the util.
 
 display:
   home_url: "https://github.com/timo-reymann/circleci-orb-github-release"

@@ -1,12 +1,9 @@
 description: >
-  Sample example description.
-# Provide a use-case based example for using this orb.
-# Everything in the `usage` section will be displayed in the orb registry.
-# Comments are not retained.
+  Create github release, upload all files in build/distributions.
 usage:
   version: 2.1
   orbs:
-    github-release: timo-reymann/github-release@1.0.0
+    github-release: timo-reymann/github-release@<version>
   workflows:
     release:
       jobs:
