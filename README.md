@@ -1,8 +1,10 @@
-# Orb Project Template
+# circleci-orb-github-release
 
 [![CircleCI Build Status](https://circleci.com/gh/timo-reymann/circleci-orb-github-release.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/timo-reymann/circleci-orb-github-release)
 [![CircleCI Orb Version](https://badges.circleci.com/orbs/timo-reymann/github-release.svg)](https://circleci.com/orbs/registry/orb/timo-reymann/github-release)
 [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/timo-reymann//master/LICENSE)
+
+CircleCI Orb to run [github-release]() in an easy and configurable way.
 
 ## Resources
 
@@ -16,3 +18,7 @@ CircleCI Orbs.
 
 We welcome [issues](https://github.com/timo-reymann//issues) to
 and [pull requests](https://github.com/timo-reymann//pulls) against this repository!
+
+### Publish new release
+
+Tag according to semver spec, push and let CircleCI do the magic.
