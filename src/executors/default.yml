@@ -1,11 +1,11 @@
 description: >
-  This is a sample executor using Docker and Node.
+  Default executor using go 1.17
 docker:
-  - image: 'cimg/node:<<parameters.tag>>'
+  - image: 'cimg/go:<<parameters.tag>>'
 parameters:
   tag:
-    default: lts
+    default: 1.17
     description: >
       Pick a specific circleci/node image variant:
-      https://hub.docker.com/r/cimg/node/tags
+      https://hub.docker.com/r/cimg/go/tags
     type: string

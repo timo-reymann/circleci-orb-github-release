@@ -1,0 +1,29 @@
+description: >
+  Upload files for a github release from a given folder
+parameters:
+  file_pattern:
+    type: string
+    default: dist/*
+    description: File pattern for files to include (will be evaluated by the shell)
+  user:
+    type: string
+    default: $CIRCLE_PROJECT_USERNAME
+    description: User the release should be authored from
+  tag:
+    type: string
+    default: $CIRCLE_TAG
+    description: Tag to create the release for
+steps:
+  - run:
+      name: Upload files for release <<parameters.tag>>
+      command: |
+        for filename in <<parameters.pattern>>
+        do
+          github-release upload \
+            --replace \
+            --user <<parameters.user>> \
+            --repo $CIRCLE_PROJECT_REPONAME \
+            --tag <<parameters.tag>> \
+            --name "$(basename "$filename")" \
+            --file "$filename"
+        done

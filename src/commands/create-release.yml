@@ -1,0 +1,24 @@
+description: >
+  Create a github release for the current project
+parameters:
+  user:
+    type: string
+    default: $CIRCLE_PROJECT_USERNAME
+    description: User the release should be authored from
+  tag:
+    type: string
+    default: $CIRCLE_TAG
+    description: Tag to create the release for
+  name:
+    type: string
+    default: Release $CIRCLE_TAG
+    description: Name of the release to create
+steps:
+  - run:
+      name: Create github release for tag <<parameters.tag>>
+      command: |
+        github-release release \
+          --user <<parameters.user>>\
+          --repo $CIRCLE_PROJECT_REPONAME \
+          --tag <<parameters.tag>> \
+          --name "<<parameters.name>>"

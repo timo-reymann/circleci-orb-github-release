@@ -1,6 +1,6 @@
 # Orb Project Template
 
-[![CircleCI Build Status](https://circleci.com/gh/timo-reymann/.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/timo-reymann/) [![CircleCI Orb Version](https://badges.circleci.com/orbs/timo-reymann/github-release.svg)](https://circleci.com/orbs/registry/orb/timo-reymann/github-release) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/timo-reymann//master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+[![CircleCI Build Status](https://circleci.com/gh/timo-reymann/circleci-orb-github-release.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/timo-reymann/circleci-orb-github-release) [![CircleCI Orb Version](https://badges.circleci.com/orbs/timo-reymann/github-release.svg)](https://circleci.com/orbs/registry/orb/timo-reymann/github-release) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/timo-reymann//master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 
 
