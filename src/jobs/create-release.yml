@@ -1,0 +1,25 @@
+description: >
+  Create a github release and specify files to upload
+
+executor: default
+
+parameters:
+  user:
+    type: string
+    default: $CIRCLE_PROJECT_USERNAME
+    description: User the release should be authored from
+  tag:
+    type: string
+    default: $CIRCLE_TAG
+    description: Tag to create the release for
+  release_name:
+    type: string
+    default: Release $CIRCLE_TAG
+    description: Name of the release to create
+steps:
+  - checkout
+  - setup
+  - create-release:
+      user: <<parameters.user>>
+      tag: <<parameters.tag>>
+      release_name: <<parameters.release_name>>

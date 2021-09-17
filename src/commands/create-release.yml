@@ -13,6 +13,10 @@ parameters:
     type: string
     default: Release $CIRCLE_TAG
     description: Name of the release to create
+  description:
+    type: string
+    default: ""
+    description: Description for the release
 steps:
   - run:
       name: Create github release for tag <<parameters.tag>>
@@ -21,4 +25,5 @@ steps:
           --user <<parameters.user>>\
           --repo $CIRCLE_PROJECT_REPONAME \
           --tag <<parameters.tag>> \
+          --description <<parameters.description>> \
           --name "<<parameters.release_name>>"
