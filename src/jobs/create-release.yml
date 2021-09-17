@@ -1,5 +1,5 @@
 description: >
-  Create a github release and specify files to upload
+  Create a github release
 
 executor: default
 
