@@ -32,9 +32,9 @@ workflows:
           <<: *filter_all
       - orb-tools/publish-dev:
           <<: *require_tests
-          orb-name: ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
+          orb-name: ${CIRCLE_PROJECT_USERNAME}/github-release
       - orb-tools/publish:
           <<: *require_tests
           <<: *filter_tags
           attach-workspace: true
-          orb-ref: ${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}@${CIRCLE_TAG}
+          orb-ref: ${CIRCLE_PROJECT_USERNAME}/github-release@${CIRCLE_TAG}
