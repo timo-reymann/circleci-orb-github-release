@@ -6,9 +6,14 @@ description: >
 usage:
   version: 2.1
   orbs:
-    github-release: timo-reymann/github-release@0.0.1
+    github-release: timo-reymann/github-release@1.0.0
   workflows:
     release:
       jobs:
         - github-release/create-release-with-files:
             file_pattern: 'build/distributions/*'
+            filters:
+              branches:
+                ignore: /.*/
+              tags:
+                only: /.*/
