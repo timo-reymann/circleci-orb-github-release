@@ -29,20 +29,9 @@ workflows:
               only: /.*/
             tags:
               only: /.*/
-      - approve-prod-deploy:
-          type: approval
-          requires:
-            - orb-tools/publish-dev
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /.*/
       - orb-tools/publish:
           orb-ref: timo-reymann/github-release@${CIRCLE_TAG}
           attach-workspace: true
-          requires:
-            - approve-prod-deploy
           filters:
             branches:
               ignore: /.*/
