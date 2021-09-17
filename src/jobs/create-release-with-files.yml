@@ -12,7 +12,7 @@ parameters:
     type: string
     default: $CIRCLE_TAG
     description: Tag to create the release for
-  name:
+  release_name:
     type: string
     default: Release $CIRCLE_TAG
     description: Name of the release to create
@@ -25,7 +25,7 @@ steps:
   - create-release:
       user: <<parameters.user>>
       tag: <<parameters.tag>>
-      name: <<parameters.name>>
+      release_name: <<parameters.release_name>>
   - upload-files:
       user: <<parameters.user>>
       tag: <<parameters.tag>>

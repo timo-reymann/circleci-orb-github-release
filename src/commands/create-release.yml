@@ -9,7 +9,7 @@ parameters:
     type: string
     default: $CIRCLE_TAG
     description: Tag to create the release for
-  name:
+  release_name:
     type: string
     default: Release $CIRCLE_TAG
     description: Name of the release to create
@@ -21,4 +21,4 @@ steps:
           --user <<parameters.user>>\
           --repo $CIRCLE_PROJECT_REPONAME \
           --tag <<parameters.tag>> \
-          --name "<<parameters.name>>"
+          --name "<<parameters.release_name>>"

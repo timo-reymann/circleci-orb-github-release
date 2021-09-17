@@ -17,7 +17,7 @@ steps:
   - run:
       name: Upload files for release <<parameters.tag>>
       command: |
-        for filename in <<parameters.pattern>>
+        for filename in <<parameters.file_pattern>>
         do
           github-release upload \
             --replace \
