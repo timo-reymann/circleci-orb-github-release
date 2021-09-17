@@ -21,6 +21,7 @@ parameters:
     default: dist/*
     description: File pattern for files to include (will be evaluated by the shell)
 steps:
+  - checkout
   - setup
   - create-release:
       user: <<parameters.user>>
