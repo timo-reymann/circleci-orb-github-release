@@ -29,7 +29,7 @@ workflows:
               only: /.*/
             tags:
               only: /.*/
-      - approve-prod-promote:
+      - approve-prod-deploy:
           type: approval
           requires:
             - orb-tools/publish-dev
@@ -38,11 +38,10 @@ workflows:
               ignore: /.*/
             tags:
               only: /.*/
-      - orb-tools/dev-promote-prod-from-git-tag:
-          orb-name: timo-reymann/github-release
-          add-pr-comment: false
+      - orb-tools/publish:
+          orb-ref: timo-reymann/github-release@${CIRCLE_TAG}
           requires:
-            - approve-prod-promote
+            - approve-prod-deploy
           filters:
             branches:
               ignore: /.*/
