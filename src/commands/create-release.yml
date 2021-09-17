@@ -25,5 +25,5 @@ steps:
           --user <<parameters.user>>\
           --repo $CIRCLE_PROJECT_REPONAME \
           --tag <<parameters.tag>> \
-          --description <<parameters.description>> \
+          --description "<<parameters.description>>" \
           --name "<<parameters.release_name>>"
