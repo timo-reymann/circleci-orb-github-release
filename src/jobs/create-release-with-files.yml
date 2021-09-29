@@ -20,6 +20,19 @@ parameters:
     type: string
     default: dist/*
     description: File pattern for files to include (will be evaluated by the shell)
+  attach-workspace:
+    default: true
+    description: >
+      Boolean for whether or not to attach to an existing workspace. Default is
+      true.
+    type: boolean
+  workspace-root:
+    default: .
+    description: >
+      Workspace root path that is either an absolute path or a path relative to
+      the working directory. Defaults to '.' (the working directory)
+    type: string
+
 steps:
   - checkout
   - setup
@@ -31,3 +44,6 @@ steps:
       user: <<parameters.user>>
       tag: <<parameters.tag>>
       file_pattern: <<parameters.file_pattern>>
+      attach-workspace: <<parameters.attach-workspace>>
+      workspace-root: <<parameters.workspace-root>>
+
