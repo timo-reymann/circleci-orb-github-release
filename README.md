@@ -8,7 +8,7 @@ CircleCI Orb to run [github-release](https://github.com/github-release/github-re
 
 ## Resources
 
-[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/timo-reymann/) - The official registry page of this
+[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/timo-reymann/github-release) - The official registry page of this
 orb for all versions, executors, commands, and jobs described.
 
 [CircleCI Orb Docs](https://circleci.com/docs/2.0/orb-intro/#section=configuration) - Docs for using and creating
@@ -16,8 +16,8 @@ CircleCI Orbs.
 
 ### How to Contribute
 
-We welcome [issues](https://github.com/timo-reymann//issues) to
-and [pull requests](https://github.com/timo-reymann//pulls) against this repository!
+We welcome [issues](https://github.com/timo-reymann/circleci-orb-github-release/issues) to
+and [pull requests](https://github.com/timo-reymann/circleci-orb-github-release/pulls) against this repository!
 
 ### Publish new release
 
